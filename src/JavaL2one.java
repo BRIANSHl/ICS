@@ -25,6 +25,7 @@ public class JavaL2one {
     public static int[] findMax(int[] arr) {
         int max, min = 0 ;
         int counter = 1;
+        int counterb = 1;
         max = arr[0];
         for (int j = 1; j < 5; j++) {
             if (arr[j] > max) {
@@ -39,11 +40,15 @@ public class JavaL2one {
             }
             if(arr[j]<min){
                 min = arr[j];
+                counter = 1;
             }
+            else if(min == arr[j]){
+                counterb++;
             }
+        }
         
 
-        System.out.println("Occurences of your max is " +counter);
+        System.out.println("Occurences of your max is " +counter +". Occurences of your min is "+counterb +".");
         return new int[] {max,min};
     }
 
