@@ -6,7 +6,7 @@ public class JavaL2one {
         int[] arr = enterFromKeyboard();
         int[] maxmin = findMax(arr);
         System.out.println(Arrays.toString(arr));
-        System.out.println("Your max is " + maxmin[0] + "and your min is " + maxmin[1]);
+        System.out.println("Your max is " + maxmin[0] + " and your min is " + maxmin[1]);
 
 
     }
@@ -34,15 +34,14 @@ public class JavaL2one {
             else if (max == arr[j]) { //if it doesnt swap at all, because max already meets max, then occurence goes up 1
                 counter++;
             }
-            else{
-                if (counter==1){
-                    min = arr[j];
-                }
-                if(arr[j]<min){
-                    arr[j] = min;
-                }
+            if (j==1){
+                min = arr[j-1];
             }
-        }
+            if(arr[j]<min){
+                min = arr[j];
+            }
+            }
+        
 
         System.out.println("Occurences of your max is " +counter);
         return new int[] {max,min};
