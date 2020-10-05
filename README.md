@@ -1,2 +1,4 @@
 # ICS-1
-BryanSHi be like O_O
+Some algorithms for ICS-1
+
+Including as of now: Bubble sort, improved bubble sort.
